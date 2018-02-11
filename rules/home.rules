@@ -18,13 +18,6 @@ then
 end
 */
 
-rule "Desk Lamp Power Change OFF"
-when
-        Item FAMRMSW_2 changed to ON
-then
-        pushover("Desk Lamp is on")
-end
-
 
 rule "Desk Lamp Power Change OFF"
 when
