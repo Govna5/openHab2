@@ -1,0 +1,14 @@
+// This is the Items File
+
+Group:Number:SUM gPower "Overall Power Usage [%.1f W]" <energy> (gAll)
+
+// Family Room
+Switch FAMRMSW_1 "Sierra Light" <light> [ "Lighting" ]
+Switch FAMRMSW_2 "Desk Lamp" <light> [ "Lighting" ]
+Number deskLight_Power "Desk Light power [%.0f W]" <energy> (gPower)
+
+// Bedroom
+Switch BDRMSW "Bedroom Switch"
+
+// Kitchen
+Switch KTCSW "Kitchen" 

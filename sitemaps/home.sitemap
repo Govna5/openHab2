@@ -1,0 +1,21 @@
+sitemap home label="JG-SmartHouse"
+{
+	Frame label="Power Consumption"
+	{
+		Text item=gPower
+	}
+	Frame label="Family Room Devices"
+	{
+		Switch item=FAMRMSW_1
+		Switch item=FAMRMSW_2
+	}
+        Frame label="Bedroom Devices"
+        {
+                Switch item=BDRMSW
+        }
+	Frame label="Kitchen Devices"
+	{
+		Switch item=KTCSW
+	}
+}
+

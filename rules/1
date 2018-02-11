@@ -1,0 +1,48 @@
+// This is the Rules file
+
+import org.openhab.core.library.types.DecimalType
+
+
+///////// Desk lamp rules | wemo wall power rules /////////
+ /*
+rule "Desk Lamp Power Change ON"
+when
+        Item deskLight_Power changed  to 16
+then
+        pushover("Desk Lamp is on")
+end
+
+
+rule "Desk Lamp Power Change OFF"
+when
+        Item deskLight_Power changed to 0
+then
+        pushover("Desk Lamp is off")
+end
+*/
+
+
+rule "Desk Lamp Off"
+when
+        Item deskLight_Power changed to 0 & FAMRMSW_2 changed to OFF
+then
+        pushover ("Desk Lamp is off")
+end
+
+///////// Sierra light | Wemo Wall Plug rules /////////
+
+rule "sierra Light On"
+when
+        Item FAMRMSW_1 changed to ON
+then
+        pushover ("Sierra LED Light is On..")
+end
+
+
+
+rule "sierra Light Off"
+when
+        Item FAMRMSW_1 changed to OFF
+then
+        pushover ("Sierra LED Light is Off..")
+end
