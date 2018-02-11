@@ -4,22 +4,26 @@ import org.openhab.core.library.types.DecimalType
 
 
 ///////// Desk lamp rules | wemo wall power rules /////////
- 
+
 rule "Desk Lamp Power Change ON"
 when
-        Item deskLight_Power changed  to 16
+        Item deskLight_Power changed
 then
+        if( deskLight_Power >0<16){
         pushover("Desk Lamp is on")
+      } else if(deskLight_Power =0){
+        pushover("Desk Lamp is off")
+      }
 end
 
-
+/*
 rule "Desk Lamp Power Change OFF"
 when
         Item deskLight_Power changed to 0
 then
         pushover("Desk Lamp is off")
 end
-
+*/
 
 
 
